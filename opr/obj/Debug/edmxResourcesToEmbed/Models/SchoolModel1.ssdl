@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="School">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContactPnumber" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Principal" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Web" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="Phone" Type="int" Nullable="false" />
+    <Property Name="Shorcode" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Description" Type="nchar" MaxLength="255" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="UserID" Type="nchar" MaxLength="130" Nullable="false" />
+    <Property Name="EnteryDate" Type="date" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="date" />
+  </EntityType>
+  <EntityContainer Name="SchoolDbModelStoreContainer">
+    <EntitySet Name="School" EntityType="Self.School" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
